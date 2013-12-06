@@ -7,6 +7,9 @@ gem 'rails', '4.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Use Devise for the login solution
+gem 'devise'
+
 # Use Rails 12 factor
 gem 'rails_12factor', '0.0.2'
 
