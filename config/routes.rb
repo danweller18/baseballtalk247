@@ -1,5 +1,5 @@
 Baseballtalk247::Application.routes.draw do
-  devise_for :admins
+  devise_for :admins, :controllers => {:registrations => "registrations"}
   devise_for :users, :controllers => {:registrations => "registrations"}
   root 'static_pages#index'
   match '/home', 	to: 'static_pages#home',	via: 'get'
