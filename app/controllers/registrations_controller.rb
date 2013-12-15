@@ -56,4 +56,27 @@ class RegistrationsController < Devise::RegistrationsController
       end
     end
   end
+
+  def destroy
+    @user = User.find(current_user.id)
+    @user.is_active = 0
+    if @user.save
+      set_flash_message :notice, :destroyed
+      sign_out @user
+      redirect_to root_path
+    else
+      render "edit"
+    end
+  end
+
+  def activate
+    @user = User.find(current_user.id)
+    @user.is_active == nil
+    if @user.save
+      set flash_message :notice
+      redirect_to edit_user_registration_path
+    else
+      render "edit"
+    end
+  end
 end
