@@ -14,7 +14,7 @@ gem 'devise'
 gem 'rails_12factor', '0.0.2'
 
 # Use Bootstrap for the framework
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.1'
