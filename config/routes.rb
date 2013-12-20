@@ -1,4 +1,6 @@
 Baseballtalk247::Application.routes.draw do
+  match '/adult_bats', 	to: 'reviews#adult_bats',	via: 'get'
+  match '/reviews',	to: 'reviews#home',		via: 'get'
   devise_for :admins, :controllers => {:registrations => "registrations"}
   devise_for :users, :controllers => {:registrations => "registrations"}
   root 'static_pages#index'
