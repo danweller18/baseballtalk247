@@ -1,9 +1,11 @@
 Baseballtalk247::Application.routes.draw do
+  match '/users/:id',	to: 'users#show',		via: 'get'
   match '/users',	to: 'users#home',		via: 'get'
   match '/adult_bats', 	to: 'reviews#adult_bats',	via: 'get'
   match '/reviews',	to: 'reviews#home',		via: 'get'
   devise_for :admins, :controllers => {:registrations => "registrations"}
-  devise_for :users, :controllers => {:registrations => "registrations"}
+  devise_for :users, :controllers => {:registrations => "registrations"}, :path_prefix => 'd'
+  resources :users, :only =>[:show]
   root 'static_pages#index'
   match '/home', 	to: 'static_pages#home',	via: 'get'
   match '/contact',	to: 'static_pages#contact', 	via: 'get'
