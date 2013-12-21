@@ -1,8 +1,16 @@
-<h1>Users#home</h1>
-<p>
-<% @users = User.all %>
-<% @users.each do |user| %>
-  <%= user.username %><br/>
-  <%= user.email %><br/>
-<% end %>
-</p>
+<h1>All Users</h1>
+<table>
+  <tr>
+    <th>User Id</th>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+  <% @users = User.all %>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>
