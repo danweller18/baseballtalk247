@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_admin!
+before_filter :authenticate_admin!, :except => [:show]
 
   def home
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
   end
 end

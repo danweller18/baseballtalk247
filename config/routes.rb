@@ -1,5 +1,5 @@
 Baseballtalk247::Application.routes.draw do
-  match '/users/:username',	to: 'users#show',	via: 'get'
+  match '/users/:id',	to: 'users#show',	via: 'get'
   match '/users',	to: 'users#home',		via: 'get'
   match '/adult_bats', 	to: 'reviews#adult_bats',	via: 'get'
   match '/reviews',	to: 'reviews#home',		via: 'get'
