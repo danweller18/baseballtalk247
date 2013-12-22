@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 before_filter :authenticate_admin!, :except => [:show]
 
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
   def show
