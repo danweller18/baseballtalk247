@@ -1,6 +1,17 @@
-<div>
-  <h1>Adult Baseball Bat Reviews</h1>
+<% provide(:title, 'Adult Bat Reviews') %>
+<h1>Adult Baseball Bat Reviews</h1>
   <p>
     This is the page for reviews of Adult baseball bats for Baseball Talk 24/7.
   </p>
-</div>
+
+<ul class="users">
+  <% @reviews.each do |review| %>
+
+<li>
+  <%= image_tag "adult_bats/voodoo14.jpg", :size => "100x500"%>
+  <%= review.manufacturer %>
+  <%= review.model_name %>
+  <%= review.model_number %>
+</li>
+  <% end %>
+</ul>
