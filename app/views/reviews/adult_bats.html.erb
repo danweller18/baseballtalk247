@@ -4,14 +4,10 @@
     This is the page for reviews of Adult baseball bats for Baseball Talk 24/7.
   </p>
 
-<ul class="users">
-  <% @reviews.each do |review| %>
+<%= will_paginate %>
 
-<li>
-  <%= image_tag "adult_bats/voodoo14.jpg", :size => "100x500"%>
-  <%= review.manufacturer %>
-  <%= review.model_name %>
-  <%= review.model_number %>
-</li>
-  <% end %>
+<ul class="users">
+  <%= render @reviews %>
 </ul>
+
+<%= will_paginate %>
