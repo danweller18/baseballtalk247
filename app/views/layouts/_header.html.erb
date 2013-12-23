@@ -1,47 +1,49 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "Baseball Talk 24/7", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Bat Reviews",      reviews_path %></li>
-          <li><%= link_to "About", about_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
-          <% if admin_signed_in? %>
-            <li><%= link_to "Users", users_path %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Edit Account", edit_admin_registration_path %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Logout", destroy_admin_session_path, :method => :delete %>
-                </li>
-              </ul>
-            </li>
-          <% else %>
-            <% if user_signed_in? %>
+<div class="navbar-wrapper">
+  <div class="container">
+    <header class="navbar">
+      <div class="navbar-inner">
+        <%= link_to "Baseball Talk 24/7", root_path, id: "logo" %>
+        <nav>
+          <ul class="nav pull-right">
+            <li><%= link_to "Bat Reviews",      reviews_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+            <% if admin_signed_in? %>
+              <li><%= link_to "Users", users_path %></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Account <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Edit Account", edit_user_registration_path %></li>
-                  <li><%= link_to "View Profile", current_user %></li>
+                  <li><%= link_to "Edit Account", edit_admin_registration_path %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                    <%= link_to "Logout", destroy_admin_session_path, :method => :delete %>
                   </li>
                 </ul>
               </li>
             <% else %>
-              <li><%= link_to "Sign in", new_user_session_path %></li>
+              <% if user_signed_in? %>
+                <li id="fat-menu" class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Account <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+                    <li><%= link_to "View Profile", current_user %></li>
+                    <li class="divider"></li>
+                    <li>
+                      <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                    </li>
+                  </ul>
+                </li>
+              <% else %>
+                <li><%= link_to "Sign in", new_user_session_path %></li>
+              <% end %>
             <% end %>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </div>
-</header>
+</div>

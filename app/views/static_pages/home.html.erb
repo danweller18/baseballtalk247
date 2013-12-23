@@ -1,9 +1,31 @@
-<div class="center hero-unit">
-  <h1>Baseball Talk 24/7</h1>
+<div id="carousel">    
+  <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <div class="active item">
+        <img src= "assets/CamdenYards.jpg">
+        <div class="carousel-caption">
+          <p>Camden Yards</p>
+          <p><a href= "http://baltimore.orioles.mlb.com">Baltimore Orioles &raquo;</a></p>
+        </div>
+      </div>
+      <div class="item"><img src= "assets/PNCPark.jpg"></div>
+      <div class="item"><img src= "assets/NationalsPark.jpg"></div>
+    </div>
+    
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+</div>
+
   <p>
     This is the home page for Baseball Talk 24/7.
   </p>
   <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-primary" %>
-</div>
-
-<%= link_to image_tag("mannydive.png", alt: "Manny Machado Awesome Dive"), 'http://mlb.com/' %>

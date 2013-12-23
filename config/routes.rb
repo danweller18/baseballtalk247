@@ -6,8 +6,7 @@ Baseballtalk247::Application.routes.draw do
   devise_for :admins, :controllers => {:registrations => "registrations"}
   devise_for :users, :controllers => {:registrations => "registrations"}, :path_prefix => 'd'
   resources :users, :only =>[:show]
-  root 'static_pages#index'
-  match '/home', 	to: 'static_pages#home',	via: 'get'
+  root 'static_pages#home'
   match '/contact',	to: 'static_pages#contact', 	via: 'get'
   match '/about',	to: 'static_pages#about',	via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
