@@ -1,6 +1,20 @@
-<li>
-  <%= image_tag reviews.image_path, :size => "100x100"%>
-  <%= reviews.manufacturer %>
-  <%= reviews.model_name %>
-  <%= reviews.model_number %>
-</li>
+<thead>
+  <tr>
+    <th>Manufacturer</th>
+    <th>Model Name</th>
+    <th>Model Number</th>
+    <th>Rating</th>
+    <th>Reviews</th>
+    <th>Pic</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= reviews.manufacturer %></td>
+    <td><%= reviews.model_name %></td>
+    <td><%= reviews.model_number %></td>
+    <td>Rating</td>
+    <td>Write Review</td>
+    <td><%= image_tag reviews.image_path %></td>
+  </tr>
+</tbody>
