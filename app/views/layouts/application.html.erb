@@ -11,6 +11,9 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
+    <% if current_page?('/') %>
+      <%= render 'layouts/carousel' %>
+    <% end %>
     <div class="container">
       <%= render 'layouts/messages' %>
       <%= yield %>
