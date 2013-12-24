@@ -1,3 +1,9 @@
+$navbarBackground:                #484848 ;
+$navbarBackgroundHighlight:       #888888 ;
+$navbarText:                      #ffffff ;
+$navbarLinkColor:                 #ffffff ;
+$navbarSearchPlaceholderColor:    #EEC844 ;
+
 @import "bootstrap";
 
 
@@ -82,45 +88,6 @@ textarea {
 }
 
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
-
-/*flash*/
-.alert-error {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
- }
-
-.alert-alert {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
- }
-
-.alert-success {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
- }
-
-.alert-notice {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
- }
-
-
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -152,7 +119,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.5em;
-  color: blue;
+  color: $grayMediumLight;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -162,6 +129,9 @@ p {
     color: black;
     text-decoration: none;
   }
+}
+
+.navbar-inner {
 }
 
 
@@ -215,6 +185,8 @@ aside {
   }
 }
 
+
+/*Gravatar*/
 .gravatar {
   float: left;
   margin-right: 10px;
@@ -233,4 +205,44 @@ aside {
       border-bottom: 1px solid $grayLighter;
     }
   }
+}
+
+
+/*flash*/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+
+/*Debugging on Develpment*/
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
