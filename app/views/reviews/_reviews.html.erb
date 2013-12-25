@@ -2,9 +2,9 @@
   <tr>
     <td><%= reviews.manufacturer %></td>
     <td><%= reviews.model_name %></td>
-    <td><%= reviews.model_number %></td>
+    <td><%= link_to reviews.model_number, '/adult_bats/' + reviews.model_number %></td>
     <td>Rating</td>
     <td>Write Review</td>
-    <td><%= image_tag reviews.image_path %></td>
+    <td><%= link_to image_tag(reviews.image_path), '/adult_bats/' + reviews.model_number %></td>
   </tr>
 </tbody>

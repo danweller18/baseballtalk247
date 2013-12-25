@@ -1,0 +1,9 @@
+<% provide(:title, @review.manufacturer + " " + @review.model_name) %>
+<div>
+  <h1>
+    <%= @review.manufacturer %>
+    <%= @review.model_name %>
+    <%= @review.model_number %>
+    <%= image_tag @review.image_path %>
+  </h1>
+</div>

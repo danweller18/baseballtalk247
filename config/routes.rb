@@ -1,4 +1,5 @@
 Baseballtalk247::Application.routes.draw do
+  match '/adult_bats/:id',	to: 'reviews#show_adult_bats', 	via: 'get'
   match '/users/:id',	to: 'users#show',		via: 'get'
   match '/users',	to: 'users#index',		via: 'get'
   match '/adult_bats', 	to: 'reviews#adult_bats',	via: 'get'
