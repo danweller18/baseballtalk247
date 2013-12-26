@@ -4,6 +4,12 @@
     <%= @review.manufacturer %>
     <%= @review.model_name %>
     <%= @review.model_number %>
-    <%= image_tag @review.image_path %>
   </h1>
+
+  <ul class="bats">
+    <li>Model Name: <%= @review.model_number %></li>
+    <li><%= image_tag @review.image_path %></li>
+    <li>Description</li>
+    <li>Table is below</li>
+  </ul>
 </div>
