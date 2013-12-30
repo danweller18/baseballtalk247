@@ -1,9 +1,9 @@
 Baseballtalk247::Application.routes.draw do
-  match '/adult_bats/:id',	to: 'reviews#show_adult_bats', 	via: 'get'
+  match '/bats/adult/:id', 	to: 'bats#show_adult_bats',	via: 'get'
+  match '/bats/adult', 	to: 'bats#adult',		via: 'get'
+  match '/bats',	to: 'bats#index',		via: 'get'
   match '/users/:id',	to: 'users#show',		via: 'get'
   match '/users',	to: 'users#index',		via: 'get'
-  match '/adult_bats', 	to: 'reviews#adult_bats',	via: 'get'
-  match '/reviews',	to: 'reviews#home',		via: 'get'
   devise_for :admins, :controllers => {:registrations => "registrations"}
   devise_for :users, :controllers => {:registrations => "registrations"}, :path_prefix => 'd'
   resources :users, :only =>[:show]

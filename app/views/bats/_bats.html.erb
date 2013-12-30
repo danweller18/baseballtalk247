@@ -1,0 +1,12 @@
+<tbody>
+
+  <tr>
+    <td><%= bats.manufacturer %></td>
+    <td><%= bats.model_name %></td>
+    <td><%= link_to bats.model_number, bats_adult_path + '/' + bats.model_number %></td>
+    <td>Rating</td>
+    <td>Write Review</td>
+    <td><%= link_to image_tag(bats.image_path), bats_adult_path + '/' +  bats.model_number %></td>
+  </tr>
+
+</tbody>

@@ -1,0 +1,15 @@
+<% provide(:title, @bat.manufacturer + " " + @bat.model_name) %>
+<div>
+  <h1>
+    <%= @bat.model_year %>
+    <%= @bat.manufacturer %>
+    <%= @bat.model_name %>
+  </h1>
+
+  <ul class="bats">
+    <li>Model Name: <%= @bat.model_number %></li>
+    <li><%= image_tag @bat.image_path1 %></li>
+    <li>Description</li>
+    <li>Table is below</li>
+  </ul>
+</div>
