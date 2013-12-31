@@ -1,4 +1,5 @@
 Baseballtalk247::Application.routes.draw do
+  match '/bats/brands',		to: 'bats#bat_brands',		via: 'get'
   match '/bats/adult/:id', 	to: 'bats#show_adult_bats',	via: 'get'
   match '/bats/adult', 	to: 'bats#adult',		via: 'get'
   match '/bats',	to: 'bats#index',		via: 'get'
