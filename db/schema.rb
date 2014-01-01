@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230174549) do
+ActiveRecord::Schema.define(version: 20131231201012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,18 +45,19 @@ ActiveRecord::Schema.define(version: 20131230174549) do
     t.string   "image_path1"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "manufacturer_id"
   end
 
   create_table "reviews", force: true do |t|
-    t.string   "manufacturer"
-    t.string   "model_name"
-    t.string   "model_number"
+    t.string   "pros"
+    t.string   "cons"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_path"
-    t.string   "image_path1"
-    t.integer  "model_year"
   end
+
+  add_index "reviews", ["user_id", "created_at"], name: "index_reviews_on_user_id_and_created_at", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
