@@ -1,6 +1,10 @@
 <li>
-  <span class="pros"><%= review.pros %></span>
-  <span class="cons"><%= review.cons %></span>
+  <span class="pros">
+    <h4>Pros:</h4>
+    <%= review.pros %></span>
+  <span class="cons">
+    <h4>Cons:</h4>
+    <%= review.cons %></span></br>
   <span class="timestamp">
     Posted <%= time_ago_in_words(review.created_at) %> ago.
   </span>
