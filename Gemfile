@@ -46,6 +46,11 @@ end
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
+# Foreman is used for the local variables.
+group :development, :test do
+  gem 'foreman'
+end 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
