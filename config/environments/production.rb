@@ -80,7 +80,7 @@ Baseballtalk247::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Production Mailer
-  config.action_mailer_default_url_options = { :host => 'baseballtalk247.herokuapp.com' }
+  config.action_mailer_default_url_options = { :host => 'herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
 
