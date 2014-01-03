@@ -1,11 +1,11 @@
 class AregistrationsController < Devise::RegistrationsController
   def new
-    flash[:info] = 'Registrations are not open.'
+    flash[:error] = 'Sorry! Something went wrong!'
     redirect_to root_path
   end
 
   def create
-    flash[:info] = 'Registrations are not open.'
+    flash[:error] = 'Sorry! Something went wrong!'
     redirect_to root_path
   end
 end
