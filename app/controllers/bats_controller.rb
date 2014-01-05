@@ -9,6 +9,7 @@ class BatsController < ApplicationController
 
   def show_adult_bats
     @bat = Bats.find_by_model_number(params[:id])
+    @review = current_user.reviews.build if user_signed_in?
   end
 
   def bat_brands

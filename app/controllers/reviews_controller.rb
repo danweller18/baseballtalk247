@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :destroy]
+  before_action :authenticate_user!, only: [:create, :destroy, :new_review]
 
   def create
     @review = current_user.reviews.build(review_params)
@@ -12,6 +12,10 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def new_review
+    @review = current_user.reviews.build if user_signed_in?
   end
 
   private
