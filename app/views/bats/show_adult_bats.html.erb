@@ -16,7 +16,15 @@
   </ul>
 
   <hr>
+  <% if @bat.reviews.any? %>
+    <h3>Reviews (<%= @bat.reviews.count %>)</h3>
+    <ol class="reviews">
+      <%= render @reviews %>
+    </ol>
+    <%= will_paginate @reviews %>  
+  <% else %>
   <section>
     <%= render 'shared/review_form' %>
   </section>
+  <% end %>
 </div>
