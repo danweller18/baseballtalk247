@@ -6,7 +6,7 @@ Baseballtalk247::Application.routes.draw do
   match '/bats',	to: 'bats#index',		via: 'get'
   match '/users/:id',	to: 'users#show',		via: 'get'
   match '/users',	to: 'users#index',		via: 'get'
-  devise_for :admins, :controllers => {:registrations => "aregistrations"}
+  devise_for :admins, :controllers => {:registrations => "admins/registrations"}
   devise_for :users, :controllers => {:registrations => "registrations"}, :path_prefix => 'd'
   resources :users, :only =>[:show]
   root 'static_pages#home'
