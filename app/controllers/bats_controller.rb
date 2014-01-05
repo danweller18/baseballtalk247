@@ -13,7 +13,5 @@ class BatsController < ApplicationController
   end
 
   def bat_brands
-    @bat = Bats.find_by_manufacturer(params[:id]) 
   end
-
 end
