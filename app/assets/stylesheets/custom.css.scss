@@ -9,6 +9,16 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+
+/*Review field*/
+.field {
+  textarea {
+   height: 150px;
+   width: 500px;
+  }
+}
+
+
 /*Bat Brand div class*/
 .batbrands {
   tr {

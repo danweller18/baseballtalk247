@@ -17,14 +17,18 @@
 
   <hr>
   <% if @bat.reviews.any? %>
-    <h3>Reviews (<%= @bat.reviews.count %>)</h3>
+    <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
+    <div align="center">
     <ol class="reviews">
       <%= render @reviews %>
     </ol>
+    </div>
     <%= will_paginate @reviews %>  
   <% else %>
-  <section>
-    <%= render 'shared/review_form' %>
-  </section>
+    <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- 0 Bat Reviews</h3>
+    <hr>
+    <section>
+      <%= render 'shared/review_form' %>
+    </section>
   <% end %>
 </div>
