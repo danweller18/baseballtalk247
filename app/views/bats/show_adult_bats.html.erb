@@ -20,6 +20,7 @@
     <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
     <div align="center">
     <ol class="reviews">
+      <%= @review.user.username %>
       <%= render @reviews %>
     </ol>
     </div>
