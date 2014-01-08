@@ -1,4 +1,5 @@
 Baseballtalk247::Application.routes.draw do
+  resources :ratings, only: :update
   match '/reviews/new',	to: 'reviews#new_review',	via: 'get'
   resources :reviews, only: [:create, :destroy]
   match '/bats/brands',		to: 'bats#bat_brands',		via: 'get'

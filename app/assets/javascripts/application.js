@@ -15,5 +15,6 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+//= require jquery.raty.min.js
 
 $(".collapse").collapse()
