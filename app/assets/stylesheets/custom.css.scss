@@ -1,4 +1,6 @@
 @import "bootstrap";
+body {  padding-top: 60px;}
+@import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
@@ -34,20 +36,17 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  background-color: $grayLighter;
-  padding-top: -20px;
-}
-
-.container {
+/*.container1 {
     margin-top: 80px;
+    margin-left: 50px;
     background: #FFFFFF;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 25px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 10px;
-}
+}*/
 
 section {
   overflow: auto;
@@ -83,13 +82,28 @@ p {
   line-height: 1.7em;
 }
 
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 
 /* footer */
 footer {
   margin-top: 45px;
-  padding-right: 50px;
   padding-top: 5px;
-  border-top: 7px solid $blueDark;
+  border-top: 1px solid $grayMediumLight;
   color: $grayLight;
   a {
     color: $gray;
@@ -237,115 +251,3 @@ aside {
     padding: 10px 0;
   }
 }
-
-
-/*apple nav positioning*/
-.new {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      margin-top: 20px;
-      margin-bottom: -95px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-}
-
-
-/*Apple Nav Bar*/
-.new ul {
-        display: inline-block;
-        outline: none;
-        cursor: pointer;
-        text-align: center;
-
-        -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.2);
-        -moz-box-shadow: 0 2px 5px rgba(0,0,0,.2);
-        box-shadow: 0 2px 5px rgba(0,0,0,.2);
-}
-
-.new ul li {
-        float: left;
-        list-style: none;
-}
-
-.new ul li a {
-        font: bold 12px/100% "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
-        border-right: 1px solid #646464;
-        padding: 11px 35px;
-        text-decoration: none;
-        color: rgba(255,255,255,1);
-        text-shadow: 0 -1px 0 rgba(0,0,0,.9);
-
-        background: -webkit-linear-gradient(top, #8b8b8b, #717171 49%, #5e5e5e 50%, #787878);
-        background: -moz-linear-gradient(top, #8b8b8b, #717171 49%, #5e5e5e 50%, #787878);
-        background: -ms-linear-gradient(top, #8b8b8b, #717171 49%, #5e5e5e 50%, #787878);
-        background: -o-linear-gradient(top, #8b8b8b, #717171 49%, #5e5e5e 50%, #787878);
-        background: linear-gradient(to bottom, #8b8b8b, #717171 49%, #5e5e5e 50%, #787878);
-}
-
-.new ul li a:before {
-        border-left: 1px solid rgba(255,255,255,.1);
-        content: "";
-        padding: 10px 35px;
-        margin: 0 -35px;
-        position: relative;
-}
-
-.new ul li a:after {
-        border-right: 1px solid rgba(255,255,255,.1);
-        content: "";
-        padding: 10px 35px;
-        margin: 0 -35px;
-        position: relative;
-}
-
-.new ul li:last-child a:after {border: none;}
-
-.new ul li:first-child a {-moz-border-radius: 5px 0 0 5px; border-radius: 5px 0 0 5px;}
-.new ul li:last-child a {-moz-border-radius: 0 5px 5px 0; border-radius: 0 5px 5px 0;}
-
-.new ul li a:hover {
-        border-right: 1px solid rgba(255,255,255,.2);
-        color: #ffffff;
-        text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-
-        -webkit-box-shadow: inset 0 0 40px rgba(255,255,255,.2);
-        -moz-box-shadow: inset 0 0 40px rgba(255,255,255,.2);
-        box-shadow: inset 0 0 40px rgba(255,255,255,.2);
-
-        background-image: -webkit-linear-gradient(top, #656556, #4a4a4a 49%, #3b3b3b 50%, #454545);
-        background-image: -moz-linear-gradient(top, #656556, #4a4a4a 49%, #3b3b3b 50%, #454545);
-        background-image: -ms-linear-gradient(top, #656556, #4a4a4a 49%, #3b3b3b 50%, #454545);
-        background-image: -o-linear-gradient(top, #656556, #4a4a4a 49%, #3b3b3b 50%, #454545);
-        background-image: linear-gradient(to bottom, #656556, #4a4a4a 49%, #3b3b3b 50%, #454545);
-}
-
-.new ul li a:active {
-        -webkit-box-shadow: inset 0 2px 8px rgba(0,0,0,.9);
-        -moz-box-shadow: inset 0 2px 8px rgba(0,0,0,.9);
-        box-shadow: inset 0 2px 8px rgba(0,0,0,.9);
-}
-
-.new ul li a.current {
-        background: -webkit-linear-gradient(top, #383a3a, #525051);
-        background: -moz-linear-gradient(top, #383a3a, #525051);
-        background: -ms-linear-gradient(top, #383a3a, #525051);
-        background: -o-linear-gradient(top, #383a3a, #525051);
-        background: linear-gradient(to bottom, #383a3a, #525051);
-
-        -webkit-box-shadow: inset 0 5px 10px rgba(0,0,0,.8);
-        -moz-box-shadow: inset 0 5px 10px rgba(0,0,0,.8);
-        box-shadow: inset 0 5px 10px rgba(0,0,0,.8);
-
-        color: #ffffff;
-        text-shadow: 0 1px 0 rgba(0,0,0,.9);
-}
-
-div.new {
-        text-align: center;
-        position: relative;
-        top: 10%;
-        padding: 20px;
-        min-width: 820px;
-}
-
