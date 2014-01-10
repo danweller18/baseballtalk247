@@ -12,15 +12,11 @@ $grayMediumLight: #eaeaea;
 }
 
 
-.container1 {
-}
-
-
 /*height of navbar in full browser mode */
 @media(min-width:768px)
 {   
 .navbar .navbar-inner {min-height:75px;}
-.navbar .navbar-inner .container1 {min-height: 150px; }
+.navbar .navbar-inner .container1 {min-height: 200px; }
 }
 
 /* Mobile Button Gradient on bar */
