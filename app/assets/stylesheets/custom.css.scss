@@ -81,6 +81,19 @@ $grayMediumLight: #eaeaea;
 }
 
 
+/*Contact form size*/
+.contact {
+  textarea {
+   height: 150px;
+   width: 500px;
+  }
+}
+
+
+/* hidden form field to check computers */
+.hidden { display: none; }
+
+
 /*Review field*/
 .field {
   textarea {

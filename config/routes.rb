@@ -1,4 +1,5 @@
 Baseballtalk247::Application.routes.draw do
+  resources "contacts", only: [:new, :create]
   resources :ratings, only: :update
   match '/reviews/new',	to: 'reviews#new_review',	via: 'get'
   resources :reviews, only: [:create, :destroy]
@@ -12,7 +13,7 @@ Baseballtalk247::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => "registrations"}, :path_prefix => 'd'
   resources :users, :only =>[:show]
   root 'static_pages#home'
-  match '/contact',	to: 'static_pages#contact', 	via: 'get'
+  match '/contact',	to: 'contacts#new',	 	via: 'get'
   match '/about',	to: 'static_pages#about',	via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

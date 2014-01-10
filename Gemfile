@@ -51,6 +51,10 @@ group :development, :test do
   gem 'foreman'
 end 
 
+# Simpleform and Mailerform gems
+gem 'mail_form'
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
