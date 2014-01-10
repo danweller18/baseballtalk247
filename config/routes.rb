@@ -1,4 +1,5 @@
 Baseballtalk247::Application.routes.draw do
+  match '/sent',	to: 'contacts#sent',		via: 'get'
   resources "contacts", only: [:new, :create]
   resources :ratings, only: :update
   match '/reviews/new',	to: 'reviews#new_review',	via: 'get'
