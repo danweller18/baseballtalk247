@@ -1,5 +1,5 @@
 @import "bootstrap";
-body {  padding-top: 75px;}
+body {  padding-top: 75px; margin-bottom: -100px;}
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
@@ -11,10 +11,16 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+
+.container1 {
+}
+
+
 /*height of navbar in full browser mode */
 @media(min-width:768px)
 {   
 .navbar .navbar-inner {min-height:75px;}
+.navbar .navbar-inner .container1 {min-height: 150px; }
 }
 
 /* Mobile Button Gradient on bar */
@@ -59,7 +65,7 @@ $grayMediumLight: #eaeaea;
 /*CHANGE THIS BELOW*/
 /*link on menu bootstrap*/
 .navbar .nav > li > a {
-    color: #f9ed9d;
+    color: #707070;
     }
 
 /* hover color of menu link */
@@ -67,7 +73,7 @@ $grayMediumLight: #eaeaea;
 
 /* Same color for active link */
 .navbar .nav .active > a, .navbar .nav .active > a:hover {color:white;}
-
+/* End of Bootstrap layout ---------*/
 
 /*container to make carousel and site match */
 .container {
@@ -149,12 +155,15 @@ p {
   }
 }
 
+/*header class*/
+header {
+  border-bottom: 1px $grayMediumLight;
+}
 
 /* footer */
 footer {
   margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
+  border-top: 1px $grayMediumLight;
   color: $grayLight;
   a {
     color: $gray;
