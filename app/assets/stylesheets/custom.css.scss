@@ -16,9 +16,16 @@ $grayMediumLight: #eaeaea;
   body {
     margin-top: -10px;
   }
+  .header .menu {
+      margin-bottom: 5px;
+}
   .footer {
     margin-left: -20px;
     margin-right: -20px;
+    ul {
+      margin-right: 15px;
+      margin-top: 14px;
+    }
 }
   .carousel {
     margin-left: -20px;
@@ -197,6 +204,7 @@ footer {
     text-align: center; 
   }
   ul {
+    margin-top: 30px;
     float: right;
     list-style: none;
     li {
