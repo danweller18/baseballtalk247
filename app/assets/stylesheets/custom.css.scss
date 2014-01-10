@@ -65,6 +65,10 @@ $grayMediumLight: #eaeaea;
   background: -ms-linear-gradient(top,  #a9e4f7 0%,#0fb4e7 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #a9e4f7 0%,#0fb4e7 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=0 ); /* IE6-8 */
+/* navbar get rid of round edges-------*/
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 /*bootstrap navbar divider colors*/
