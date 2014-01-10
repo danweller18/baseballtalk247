@@ -11,12 +11,25 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+/*Mobile tablet and phone looks*/
+@media(max-width:767px){
+  body {
+    margin-top: -10px;
+  }
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+  .carousel {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+  }
+}
 
 /*height of navbar in full browser mode */
-@media(min-width:768px)
-{   
+@media(min-width:768px){   
 .navbar .navbar-inner {min-height:75px;}
-.navbar .navbar-inner .container1 {min-height: 200px; }
 }
 
 /* Mobile Button Gradient on bar */
