@@ -23,4 +23,3 @@ doc/
 .env
 Procfile
 
-/config/database.yml
