@@ -22,3 +22,5 @@ doc/
 # Ignore the local variables and procfile
 .env
 Procfile
+
+/config/database.yml
