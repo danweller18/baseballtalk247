@@ -18,18 +18,26 @@ $grayMediumLight: #eaeaea;
   }
   .header .menu {
       margin-bottom: 5px;
-}
+  }
   .footer {
     margin-left: -20px;
-    margin-right: -20px;
+    margin-right: -10px; 
     ul {
       margin-right: 15px;
       margin-top: 14px;
     }
-}
+  }
   .carousel {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -20px;
+  }
+}
+
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px){
+  .carousel {
     margin-top: -20px;
   }
 }
@@ -40,6 +48,7 @@ $grayMediumLight: #eaeaea;
 }
 
 /* Mobile Button Gradient on bar */
+/* name used is blue 3d#5 */
 .navbar-inner, .navbar .btn-navbar {
   background: #a9e4f7; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */

@@ -15,7 +15,9 @@
     <%= render 'layouts/header' %>
     </div>
     <% if current_page?('/') %>
+      <div class= "carousel">
       <%= render 'layouts/carousel' %>
+      </div>
     <% end %>
     <div class="container">
       <%= render 'layouts/messages' %>
