@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = current_user.reviews.build(review_params)
-    if @review.save
+    if @review.save!
       flash[:success] = "Review created!"
       redirect_to root_url
     else
@@ -21,6 +21,6 @@ class ReviewsController < ApplicationController
   private
 
     def review_params
-      params.require(:review).permit(:pros, :cons)
+      params.require(:review).permit(:pros, :cons, :bat_id, :user_id)
     end
 end

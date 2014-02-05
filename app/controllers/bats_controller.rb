@@ -4,11 +4,11 @@ class BatsController < ApplicationController
   end
 
   def adult
-    @bats = Bats.paginate(page: params[:page])
+    @bats = Bat.paginate(page: params[:page])
   end
 
   def show_adult_bats
-    @bat = Bats.find_by_model_number(params[:id])
+    @bat = Bat.find_by_model_number(params[:id])
     @reviews = @bat.reviews.paginate(page: params[:page])
     @review = current_user.reviews.build if user_signed_in?
     @rating = Rating.where(review_id: @review.id, user_id: @current_user.id).first

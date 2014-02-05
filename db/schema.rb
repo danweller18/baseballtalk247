@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140117052240) do
+ActiveRecord::Schema.define(version: 20140205152215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(version: 20140117052240) do
     t.string   "image_path1"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
-    t.integer  "manufacturer_id"
   end
 
   create_table "ratings", force: true do |t|
@@ -66,7 +64,7 @@ ActiveRecord::Schema.define(version: 20140117052240) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "bats_id"
+    t.integer  "bat_id"
     t.integer  "rating_id"
   end
 
