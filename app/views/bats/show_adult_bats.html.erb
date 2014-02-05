@@ -18,13 +18,7 @@
   <hr>
 
   
-    <script>
-  $('#star').raty({
-    readOnly: true,
-    score: <%= @review.average_rating %>,
-    path: '/assets'
-  });
-
+<script>
   $('#user_star').raty({
     score: <%= @rating.score %>,
     path: '/assets',
@@ -38,7 +32,6 @@
   });
 </script>
 
-<%= ratings.size %>
     <p>Average rating</p>
     <div id="star"></div>
   

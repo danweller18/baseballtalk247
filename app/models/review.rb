@@ -9,6 +9,6 @@ class Review < ActiveRecord::Base
   validates :user_id, presence: true
 
   def average_rating
-    ratings.sum(:score) / ratings.size
+    return ratings.sum(:score) / ratings.length
   end
 end
