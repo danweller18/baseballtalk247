@@ -3,7 +3,7 @@ class Review < ActiveRecord::Base
   belongs_to :user
   belongs_to :bat
   default_scope -> { order('created_at DESC') }
-  validates :bat, presence: true
+#  validates :bat, presence: true
   validates :pros, presence: true
   validates :cons, presence: true
   validates :user_id, presence: true
