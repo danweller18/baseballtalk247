@@ -38,20 +38,24 @@
     <p>Your rating</p>
     <div id="user_star"></div>
   <hr>
+
+  <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
+
   <% if @bat.reviews.any? %>
-    <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
     <div align="center">
     <ol class="reviews">
       <%= @review.user.username %>
       <%= render @reviews %>
     </ol>
     </div>
-    <%= will_paginate @reviews %>  
+    <%= will_paginate @reviews %>
   <% else %>
-    <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- 0 Bat Reviews</h3>
-    <hr>
-    <section>
-      <%= render 'shared/review_form' %>
-    </section>
-  <% end %>
+    <div align="center">
+      <h2>Be the first to review the bat!</h2>
+    </div>
+  <% end %> 
+  <hr>
+  <section>
+    <%= render 'shared/review_form' %>
+  </section>
 </div>

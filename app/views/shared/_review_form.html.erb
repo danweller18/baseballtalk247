@@ -2,10 +2,14 @@ Within app/views/shared/_review_form place all review objects except bats
 <%= form_for(@review) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field" align= "center">
+    <h3>Select bat</h3>
+    <%= f.select :bat_id, [['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
     <h3>What do you like about this bat?</h3>
     <%= f.text_area :pros, placeholder: "Enter what you like..." %>
     <h3>What do you not like about this bat?</h3>
     <%= f.text_area :cons, placeholder: "Enter what you don't like..." %></br>
   </div>
-  <%= f.submit "Add Review", class: "btn btn-large btn-primary" %>
+  <div align="center">
+  <%= f.submit "Add Review", class: "btn btn-large btn-info" %>
+  </div>
 <% end %>
