@@ -1,8 +1,9 @@
-<% provide(:title, @bat.manufacturer + " " + @bat.model_name) %>
+<% provide(:title, #@bat.manufacturer_id + " " +
+ @bat.model_name) %>
 <div>
   <h1>
     <%= @bat.model_year %>
-    <%= @bat.manufacturer %>
+    <%= @bat.manufacturer_id %>
     <%= @bat.model_name %>
   </h1>
 
@@ -39,7 +40,7 @@
     <div id="user_star"></div>
   <hr>
 
-  <h3><%= @bat.model_year %> <%= @bat.manufacturer %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
+  <h3><%= @bat.model_year %> <%= @bat.manufacturer_id %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
 
   <% if @bat.reviews.any? %>
     <div align="center">

@@ -3,7 +3,7 @@ Within app/views/shared/_review_form place all review objects except bats
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field" align= "center">
     <h3>Select bat</h3>
-    <%= f.select :bat_id, [['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
+    <%= f.collection_select :bat_id, Manufacturer.all, :id, :manufacturer, include_blank: true %>
     <h3>What do you like about this bat?</h3>
     <%= f.text_area :pros, placeholder: "Enter what you like..." %>
     <h3>What do you not like about this bat?</h3>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140206035614) do
+ActiveRecord::Schema.define(version: 20140207051530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20140206035614) do
   add_index "admins", ["username"], name: "index_admins_on_username", unique: true, using: :btree
 
   create_table "bats", force: true do |t|
-    t.string   "manufacturer"
     t.string   "model_name"
     t.string   "model_number"
     t.integer  "model_year"
@@ -45,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140206035614) do
     t.string   "image_path1"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "manufacturer_id"
   end
 
   create_table "manufacturers", force: true do |t|
