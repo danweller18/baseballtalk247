@@ -15,6 +15,9 @@ class BatsController < ApplicationController
     unless @rating
       @rating = Rating.create(review_id: @review.id, user_id: @current_user.id, score: 0)
     end
+
+    @manufacturers = Manufacturer.all
+
   end
 
   def bat_brands
