@@ -9,36 +9,12 @@
 
 <table class="table table-striped">
   <tbody>
+  <% @manufacturers.each do |manufacturer| %>
   <tr>
-    <td>Akadema</td>
-    <td>Anderson</td>
-    <td>Baden</td>
+    <td><%= manufacturer.manufacturer %><br><br> Image of brand</td>
+    <td><%= manufacturer.manufacturer %><br><br> Image of brand</td>
   </tr>
-  <tr>
-    <td><%= image_tag "akadema.jpg" %></td>
-    <td>Picture1</td>
-    <td>Picture2</td>
-  </tr>
-  <tr>
-    <td>Bass</td>
-    <td>Boombah</td>
-    <td>Carrera Sports Company</td>
-  </tr>
-  <tr>
-    <td>Picture</td>
-    <td>Picture1</td>
-    <td>Picture2</td>
-  </tr>
-   <tr>
-    <td>Combat</td>
-    <td>DeMarini</td>
-    <td>Dream Bat Company</td>
-  </tr>
-  <tr>
-    <td>Picture</td>
-    <td>Picture1</td>
-    <td>Picture2</td>
-  </tr>
+  <% end %>
 </tbody>
 </table>
 

@@ -3,9 +3,9 @@ Within app/views/shared/_review_form place everything
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field" align= "center">
     <h3>Select Brand</h3>
-    <%= f.collection_select :bat_id, Manufacturer.all, :id, :manufacturer, include_blank: true %>
+    <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :manufacturer, include_blank: true %>
     <h3>Select Bat</h3>
-    <%= f.collection_select :bat_id, Bat.all, :id, :model_year_and_name, include_blank: true %>
+    <%= f.grouped_collection_select :bat_id, Manufacturer.all, :bats, :manufacturer, :id, :model_year_and_name, include_blank: true %>
     <h3>What do you like about this bat?</h3>
     <%= f.text_area :pros, placeholder: "Enter what you like..." %>
     <h3>What do you not like about this bat?</h3>

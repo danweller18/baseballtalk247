@@ -21,5 +21,6 @@ class BatsController < ApplicationController
   end
 
   def bat_brands
+    @manufacturers = Manufacturer.all
   end
 end
