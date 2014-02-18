@@ -1,8 +1,8 @@
-<% provide(:title, @bat.manufacturer.manufacturer + " " + @bat.model_name) %>
+<% provide(:title, @bat.manufacturer.name + " " + @bat.model_name) %>
 <div>
   <h1>
     <%= @bat.model_year %>
-    <%= @bat.manufacturer.manufacturer %>
+    <%= @bat.manufacturer.name %>
     <%= @bat.model_name %>
   </h1>
 
@@ -40,7 +40,7 @@
     <div id="user_star"></div>
   <hr>
 
-  <h3><%= @bat.model_year %> <%= @bat.manufacturer.manufacturer %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
+  <h3><%= @bat.model_year %> <%= @bat.manufacturer.name %> <%= @bat.model_name %>- <%= pluralize(@bat.reviews.count, "Bat Review") %></h3>
 
   <% if @bat.reviews.any? %>
     <div align="center">
@@ -57,7 +57,7 @@
   <% end %> 
   <hr>
   <section>
-    <h2 align="center">If the <%= @bat.model_year %> <%= @bat.manufacturer.manufacturer %> <%= @bat.model_name %> is the bat you would like to review then proceed!</h2>
+    <h2 align="center">If the <%= @bat.model_year %> <%= @bat.manufacturer.name %> <%= @bat.model_name %> is the bat you would like to review then proceed!</h2>
     <br>
     <h2 align="center">If you would like to review another bat, please <%= link_to "click here!", reviews_new_path %></h2>
     <%= render 'review_form' %>

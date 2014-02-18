@@ -2,8 +2,6 @@ Within app/views/bats/_review_form place all review objects except bats
 <%= form_for(@review) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field" align= "center">
-    <h3>Select Brand</h3>
-    <%= f.collection_select :bat_id, Bat.all.sort {|a, b| a.manufacturer_model_year_and_name <=> b.manufacturer_model_year_and_name}, :id, :manufacturer_model_year_and_name, include_blank: true %>
     <h3>Select Bat</h3>
     <h3>What do you like about this bat?</h3>
     <%= f.text_area :pros, placeholder: "Enter what you like..." %>
