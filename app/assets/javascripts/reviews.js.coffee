@@ -2,20 +2,19 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery ->
-  $('#review_bat_id').hide()
-  $('#nobats').hide()
-  bats = $('#review_bat_id').html()
-  $('#review_manufacturer_id').change ->
-    manufacturer = $('#review_manufacturer_id :selected').text()
-    escaped_manufacturer = manufacturer.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1')
-    options = $(bats).filter("optgroup[label='#{escaped_manufacturer}']").html()
-    if options
-      $('#review_bat_id').html(options)
-      $('#review_bat_id').show()
-      $('#nobats').hide()
-    else
-      $('#review_bat_id').empty()
-      $('#review_bat_id').hide()
-      $('#nobats').html("<h2>Sorry there are currently no bats for the selected brand.</h2><h3>Please <a href= \"http://baseballtalk247.com/contact\">request</a> a bat be added to the site.</h3>")
-      $('#nobats').show()
+ready = ->
+  # rename the original select and hide it
+  $('#review_bat_id').attr('id', 'review_bat_id_original').hide();
+
+  $('#manufacturer_manufacturer_id').on 'change', ->
+    $('#review_bat_id').remove(); # remove any bat_id selects
+    $('#review_bat_id_original')
+      .clone() # clone the original
+      .attr('id', 'review_bat_id') # change the ID to the proper id
+      .insertAfter('#review_bat_id_original') # place it
+      .show() # show it
+      .find(':not(option[data-manufacturer="' + $(this).val() + '"])')
+          .remove(); # find all options by other manufacturers and remove them
+
+$(document).ready ready
+$(document).on 'page:load', ready

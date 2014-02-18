@@ -2,17 +2,20 @@ Within app/views/shared/_review_form place everything
 <%= form_for(@review) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field" align= "center">
-    <h3>Select Bat</h3>
-      <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name, include_blank: true %>
-    <br><br><div id='nobats'></div>
-      <%= f.grouped_collection_select :bat_id, Manufacturer.all, :bats, :name, :id, :model_year_and_name, include_blank: true %>
-    <br>
+    <div class="field">
+      <%= f.label :manufacturer_id %><br>
+      <%= collection_select :manufacturer, :manufacturer_id, Manufacturer.all, :id, :name, :include_blank => true %>
+    </div>
+    <div class="field">
+      <%= f.label :bat_id %><br>
+      <%= f.select :bat_id, Bat.all.map{ |b| [b.model_name, b.id, {'data-manufacturer' => b.manufacturer_id}] } %>
+    </div>
     <h3>What do you like about this bat?</h3>
     <%= f.text_area :pros, placeholder: "Enter what you like..." %>
     <h3>What do you not like about this bat?</h3>
     <%= f.text_area :cons, placeholder: "Enter what you don't like..." %></br>
   </div>
   <div align="center">
-  <%= f.submit "Submit Review", class: "btn btn-large btn-info" %>
+    <%= f.submit "Submit Review", class: "btn btn-large btn-info" %>
   </div>
 <% end %>
