@@ -10,10 +10,12 @@
     </p>
   </div>
 <% else %>
-  
-  <p>
-    This is the home page for Baseball Talk 24/7.
-  </p>
-  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-info" %>
-
+  <div class= "home-p">
+    <p>
+      This is the home page for Baseball Talk 24/7.
+    </p>
+  </div>
+  <div class= "home-sign">
+    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-large btn-info" %>
+  </div>
 <% end %>

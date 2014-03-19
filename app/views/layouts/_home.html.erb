@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+<% else %>
+  <div class= "background">
+    <%= image_tag "rangersfield.jpg" %>
+  </div>
+  <div class= "carousel">
+    <%= render 'layouts/carousel' %>
+  </div>
+<% end %>

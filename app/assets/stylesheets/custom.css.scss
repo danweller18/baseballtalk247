@@ -27,9 +27,9 @@ $grayMediumLight: #eaeaea;
       margin-top: 14px;
     }
   }
-  .carousel {
-    margin-left: -10px;
-    margin-right: -10px;
+  .background {
+    margin-left: -20px;
+    margin-right: -20px;
     margin-top: -20px;
   }
 }
@@ -37,7 +37,7 @@ $grayMediumLight: #eaeaea;
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px){
-  .carousel {
+  .background {
     margin-top: -20px;
   }
 }
@@ -118,7 +118,6 @@ $grayMediumLight: #eaeaea;
   }
 }
 
-
 /* hidden form field to check computers */
 .hidden { display: none; }
 
@@ -160,6 +159,29 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+/* Home Page */
+.home-p {
+  position: absolute;
+  top: 15%;
+  color: white;
+}
+
+.home-sign {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+}
+
+
+/* Carousel */
+.carousel {
+  position: absolute;
+  top: 20%;
+  left: 5.0%;
+  width: 80%;
+  height: 80%;
 }
 
 
